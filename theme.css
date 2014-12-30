@@ -3,6 +3,9 @@
     height: 300px;
     text-align: center;
     border: 5px solid #000000;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .img-pic {
@@ -13,10 +16,32 @@
 
 .theme-showcase {
     padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 .theme-dropdown .dropdown-menu {
     position: static;
     display: block;
     margin-bottom: 20px;
+}
+
+.panel-body {
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+.label {
+    display: incline;
+    font-weight: normal;
+    font-size: 11pt;
+}
+
+.author-descrip {
+    display: incline;
+    font-weight: normal;
+    font-size: 11pt;
+}
+
+#author-descrip1, #author-descrip2 {
+    padding-top: 5px;
 }
