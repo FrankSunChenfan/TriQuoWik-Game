@@ -7,3 +7,5 @@ It is a website that pack Quora and Wikipedia into Trivia form. [ Optimized by h
 Hopefully this page will go will!
 
 Initial landing page is uploaded.
+Initial theme.css is uploaded.
+- parts folder is for js reference.
