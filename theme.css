@@ -12,5 +12,11 @@
 }
 
 .theme-showcase {
-    padding-top: 75px
+    padding-top: 75px;
+}
+
+.theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
 }
