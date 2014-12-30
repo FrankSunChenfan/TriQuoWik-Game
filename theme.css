@@ -2,10 +2,10 @@
     width: 200px;
     height: 300px;
     text-align: center;
-    border: 5px solid #000000;
+    border: 3px solid black;
     border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 15px;
+    display: inline-block;
 }
 
 .img-pic {
@@ -15,8 +15,8 @@
 }
 
 .theme-showcase {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -48,4 +48,19 @@
 
 .panel {
     margin-top: 30px;
+}
+
+#about > p{
+    font-size: 13pt;
+}
+
+#about > h1 {
+    font-size: 26pt;
+}
+
+#about {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
