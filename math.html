@@ -7,7 +7,7 @@
     <!--
     <link rel="icon" href="essential/favicon.ico">
     -->
-    <title>Game Again</title>
+    <title>Math</title>
 
     <!-- Bootstrap core CSS -->
     <link href="essential/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,19 +28,59 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <div class="container theme-showcase" role="main">
-      <div class="jumbotron">
-          <h1>Math</h1>
-          <p>Click the button below for a random algebra problem!</p>
-          <p><a href="#" id="generate" class="btn btn-primary btn-lg" role="button">Generate</a></p>
+  <!-- Overflow:hidden set to prevent scrolling -->
+  <body role="document" style="overflow:hidden">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <!-- <a class="navbar-brand" href="#">Bootstrap theme</a> -->
+              <a href="landing.html"><span class="navbar-brand">TriQuoWik</span></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#author">Author</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <!-- TODO: FIX DROPDOWN -->
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Math</a></li>
+                          <li><a href="#">Computer Science</a></li>
+                          <li><a href="#">Physics</a></li>
+                          <li><a href="#">Life</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div><!--/.nav-collapse -->
       </div>
-      <div class="jumbotron">
-          <p id="problem"></p>
+  </nav>
+  <!-- Forgive me for my in-line style. There are barely any changes from default behavior -->
+  <div class="container theme-showcase" role="main" style="padding-top:0px">
+      <div class="jumbotron" style="border:5px solid black">
+          <h1>Algebra</h1>
+          <p>Click the button below for a random algebra problem. <br />
+          Everytime you answer correctly you will be given one point. <br />
+          You cannot answer the same problem correctly twice in a row, <br />
+          you will have to generate a new problem. Good luck!</p>
+          <p><a href="#" id="generate" class="btn btn-primary btn-lg" role="button">Generate</a></p>
+          <hr>
+          <p id="problem">Let's get started!</p>
           <form>
           Answer <input type="text" name="answer" id="answer">
           </form>
           <br />
           <p><a href="#" class="btn btn-primary btn-lg" role="button" id="submit">Submit</a></p>
+          <p id="result">Waiting on your answer...</p>
+          <h2> Points </h2>
+          <hr>
+          <p id="points">0</p>
       </div>
   </body>
 </html>

@@ -1,4 +1,5 @@
 /* TriQuoWik
+Author: Derek Coley
 Generates random algebra problems to quiz
 the user on. Will alert if the user answers
 with the proper solution or not */
@@ -14,6 +15,7 @@ with the proper solution or not */
 	// Generates a random algebra problem for the user
 	// to try and answer
 	function quiz() {
+		$("result").innerHTML = "Waiting on your answer...";
 		// Random number between 1 - 100
 		var first = Math.floor(Math.random() * 100) + 1;
 		var second = Math.floor(Math.random() * 100) + 1;
@@ -34,12 +36,17 @@ with the proper solution or not */
 		answer = operators[selectedOp].method(first, second);
 	}
 
+	// If the user answers correctly notify them so
+	// and increment their total points by 1.
 	function answer() {
 		if (answer != null) {
 			if ($("answer").value == answer) {
-				alert("You got it right!")
+				$("result").innerHTML = "You got it right!";
+				$("points").innerHTML = parseInt($("points").innerHTML) + 1; 
+				// Prevent user from submitting same correct answer twice
+				answer = null;
 			} else {
-				alert("Try again :(")
+				$("result").innerHTML = ("Try again. If you're stuck you can generate a new problem")
 			}
 		}
 	}
