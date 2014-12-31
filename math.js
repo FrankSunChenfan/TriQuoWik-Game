@@ -7,7 +7,7 @@ with the proper solution or not */
 	"use strict"
 	window.onload = function() {
 		$("generate").onclick = quiz;
-		$("submit").onclick = answer;	
+		$("submit").onclick = answer;
 	}
 
 	// Called when the math button is clicked
@@ -30,7 +30,18 @@ with the proper solution or not */
 		}]
 		var selectedOp = Math.floor(Math.random() * operators.length);
 		$("problem").innerHTML = first + " " + operators[selectedOp].sign + " " + second;
-		// operators[selectedOp].method(first, second)
+		// Answer becomes a global variable here
+		answer = operators[selectedOp].method(first, second);
+	}
+
+	function answer() {
+		if (answer != null) {
+			if ($("answer").value == answer) {
+				alert("You got it right!")
+			} else {
+				alert("Try again :(")
+			}
+		}
 	}
 
 	// Returns elem by ID from the document
